@@ -16,17 +16,18 @@ pinMode(11, OUTPUT); // LED n°10 (pin 11)
 
 void loop() // Main loop function . . .
 {
-  int delais = 400;
+  int ecart_entre_deux_battements = 100;
+  int periode_un_battement = 300;
   
   for (int i=2;i<12;i+=1)
   {
     digitalWrite(i, HIGH);
   }   
-  delay(delais);
+  delay(periode_un_battement);
   for (int i=2;i<12;i+=1)
   {
     digitalWrite(i, LOW);
   }   
-  delay(delais);
+  delay(ecart_entre_deux_battements);
 }
 

@@ -17,9 +17,10 @@ pinMode(11, OUTPUT); // LED n°10 (pin 11)
 void loop() // Main loop function . . .
 {
   int delais = 400;
-  int i=1, j=i+1; //choisir quelle LED on veut allumer en 
+  int i=4, j=i+1; //choisir quelle LED on veut allumer en 
                   //changeant la valeur de i, entre 1 et 10.
   digitalWrite(j, HIGH); 
   delay(delais);
   digitalWrite(j, LOW);
+  delay(100);
 }

@@ -1,4 +1,5 @@
 
+
 void setup() 
 {
   // Initialization . . .
@@ -16,16 +17,32 @@ pinMode(11, OUTPUT); // LED n°10 (pin 11)
 
 void loop() // Main loop function . . .
 {
-  int delais = 500;
-  int i;
-  
-  while( i<12)
+  int delais = 100;
+
+  for (int i=2 ; i<8 ; i++)
   {
-    digitalWrite(i, HIGH);
+    if (i==2 || i==7)
+    {
+      digitalWrite(i, HIGH);
+    }
+    else
+    {
+      digitalWrite(i, HIGH);
+      digitalWrite(14-i, HIGH);
+    }
     delay(delais);
-    digitalWrite(i, LOW); 
-    if (i>8){i-=7;}
-    else{ i+=3;}
+  }
+  for (int i=7 ; i>1 ; i--)
+  {
+    if (i==2 || i==7)
+    {
+      digitalWrite(i, LOW);
+    }
+    else
+    {
+      digitalWrite(i, LOW);
+      digitalWrite(14-i, LOW);
+    }
+    delay(delais);
   }
 }
-
