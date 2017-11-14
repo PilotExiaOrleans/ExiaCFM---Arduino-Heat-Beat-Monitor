@@ -1,6 +1,4 @@
-
-void setup() 
-{
+void setup() {
   // Initialization . . .
 pinMode(2, OUTPUT); // LED n°1 (pin 2)
 pinMode(3, OUTPUT); // LED n°2 (pin 3)
@@ -12,14 +10,16 @@ pinMode(8, OUTPUT); // LED n°7 (pin 8)
 pinMode(9, OUTPUT); // LED n°8 (pin 9)
 pinMode(10, OUTPUT); // LED n°9 (pin 10)
 pinMode(11, OUTPUT); // LED n°10 (pin 11)
+
 }
 
-void loop() // Main loop function . . .
+void loop() 
 {
-  int delais = 400;
-  int i=1, j=i+1; //choisir quelle LED on veut allumer en 
-                  //changeant la valeur de i, entre 1 et 10.
-  digitalWrite(j, HIGH); 
-  delay(delais);
-  digitalWrite(j, LOW);
+  int entree_analogique = analogRead(0);
+  int tmps_ecoule = millis()
+  Serial.print("Temps: ");
+  Serial.print(tmps_ecoule);
+  Serial.print("Poul: ");
+  Serial.print(entree_analogique);
+  Serial.println(" ;")
 }
