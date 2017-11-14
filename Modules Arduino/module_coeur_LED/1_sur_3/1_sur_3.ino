@@ -17,12 +17,15 @@ pinMode(11, OUTPUT); // LED n°10 (pin 11)
 void loop() // Main loop function . . .
 {
   int delais = 400;
+  int i;
   
-  for (int i=2;i<12;i+=1)
+  while( i<12)
   {
-    digitalWrite(i, HIGH); 
+    digitalWrite(i, HIGH);
     delay(delais);
-    digitalWrite(i, LOW);
+    digitalWrite(i, LOW); 
+    if (i>8){i-=7;}
+    else{ i+=3;}
   }
 }
 

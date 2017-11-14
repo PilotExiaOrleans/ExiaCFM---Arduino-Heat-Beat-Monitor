@@ -20,9 +20,13 @@ void loop() // Main loop function . . .
   
   for (int i=2;i<12;i+=1)
   {
-    digitalWrite(i, HIGH); 
-    delay(delais);
+    digitalWrite(i, HIGH);
+  }   
+  delay(delais);
+  for (int i=2;i<12;i+=1)
+  {
     digitalWrite(i, LOW);
-  }
+  }   
+  delay(delais);
 }
 
