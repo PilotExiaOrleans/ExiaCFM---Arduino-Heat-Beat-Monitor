@@ -1,7 +1,8 @@
-#include "cardio.cpp"
+#include "cardio.c"
 
 short etat = 0;
 short valeur_intermediaire = 0;
+int temps_actuel = 0;
 int temps_fin_battement = 0; 
 int temps_depart_battement = 0;
 int i = 0;
@@ -14,7 +15,7 @@ int duree_ecart = 0;
 void setup() {
   // Initialization . . .
   Serial.begin(9600);
-  pinMode(A1, INPUT);
+  pinMode(A0, INPUT);
 }
 
 void loop() {
@@ -26,15 +27,30 @@ void loop() {
   else
   {
     etat = 1;
-    DeterminationEcartenCours(temps_depart_ecart, temps_fin_ecart, duree_ecart)
+    temps_actuel = millis();
+    DeterminationEcartenCours(temps_depart_ecart, temps_fin_ecart, duree_ecart, temps_actuel);
   }
   
   if (etat != valeur_intermediaire)
   {
     short ComplementationValeurIntermediaire(valeur_intermediaire);
-    int DeterminationPositionBattement(short etat, int temps_depart_battement,int temps_fin_battement);
-    int FinalisationDeLaBoucle(int temps_depart_battement, int temps_fin_battement, int duree_battement, int temps_depart_ecart);
+    temps_actuel = millis();
+    DeterminationPositionBattement(etat, temps_depart_battement, temps_fin_battement, temps_actuel);
+    if (temps_fin_battement !=0)
+    {
+      Serial.print("Temps de départ du battement :");
+      Serial.println(temps_depart_battement);
+      Serial.print("Temps de fin du battement :");
+      Serial.println(temps_fin_battement);
+      Serial.print("Durrée du battement :");
+      duree_battement = temps_fin_battement - temps_depart_battement;
+      Serial.println(duree_battement);
+      temps_depart_battement = 0;
+      temps_fin_battement = 0;
+      temps_depart_ecart = millis();
+    }
   }
+  
   listeBattements[i][1] = duree_battement;
   listeBattements[i][2] = duree_ecart;
   Serial.println(listeBattements[i][1]);
