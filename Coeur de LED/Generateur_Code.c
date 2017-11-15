@@ -6,6 +6,7 @@
 void Initialisation()
 {
     FILE *f = NULL;
+    system("md param.h");
     f=fopen("param.h/param.h.ino", "w");
     if (f!=NULL)
     {
@@ -25,7 +26,7 @@ void Initialisation()
 void Ouverture_Televersement()
 {
     system("start param.h/param.h.ino");
-    Sleep(5000);
+    Sleep(7000);
     keybd_event(VK_CONTROL,0,0,0);                   //copyright: Bastien Le Gall
     keybd_event('U',0,0,0);                          //copyright: Bastien Le Gall
     keybd_event('U',0,KEYEVENTF_KEYUP,0);            //copyright: Bastien Le Gall
