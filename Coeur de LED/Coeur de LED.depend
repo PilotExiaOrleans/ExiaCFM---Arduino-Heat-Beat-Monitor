@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1510677294 source:c:\users\louis\documents\exia\projets\projet a1-fondamentaux scientifiques -2017-2018 - v2\coeur de led\main.c
+1510752366 source:c:\users\louis\documents\exia\projets\projet a1-fondamentaux scientifiques -2017-2018 - v2\coeur de led\main.c
 	<stdio.h>
 	<stdlib.h>
 	"menu.h"
@@ -13,12 +13,14 @@
 	<stdio.h>
 	<stdlib.h>
 
-1510737227 source:c:\users\louis\documents\exia\projets\projet a1-fondamentaux scientifiques -2017-2018 - v2\coeur de led\menu.c
+1510740971 source:c:\users\louis\documents\exia\projets\projet a1-fondamentaux scientifiques -2017-2018 - v2\coeur de led\menu.c
 	<stdio.h>
 	<stdlib.h>
 	"menu.h"
 
-1510737797 source:c:\users\louis\documents\exia\projets\projet a1-fondamentaux scientifiques -2017-2018 - v2\coeur de led\generateur_code.c
+1510752609 source:c:\users\louis\documents\exia\projets\projet a1-fondamentaux scientifiques -2017-2018 - v2\coeur de led\generateur_code.c
 	<stdio.h>
 	<stdlib.h>
+	<windows.h>
+	<conio.h>
 
