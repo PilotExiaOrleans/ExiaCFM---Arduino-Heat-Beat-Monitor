@@ -1,25 +1,55 @@
-void setup() {
-  // Initialization . . .
-pinMode(2, OUTPUT); // LED n°1 (pin 2)
-pinMode(3, OUTPUT); // LED n°2 (pin 3)
-pinMode(4, OUTPUT); // LED n°3 (pin 4)
-pinMode(5, OUTPUT); // LED n°4 (pin 5)
-pinMode(6, OUTPUT); // LED n°5 (pin 6)
-pinMode(7, OUTPUT); // LED n°6 (pin 7)
-pinMode(8, OUTPUT); // LED n°7 (pin 8)
-pinMode(9, OUTPUT); // LED n°8 (pin 9)
-pinMode(10, OUTPUT); // LED n°9 (pin 10)
-pinMode(11, OUTPUT); // LED n°10 (pin 11)
+//#include "cardio.h"
 
+
+short ComplementationValeurIntermediaire(valeur)
+{
+  if (valeur == 1)
+    {
+      return valeur = 0;
+    }
+    else
+    {
+      return valeur = 1;
+    }
 }
 
-void loop() 
+
+int DeterminationPositionBattement(int depart,int fin)
 {
-  int entree_analogique = analogRead(0);
-  int tmps_ecoule = millis()
-  Serial.print("Temps: ");
-  Serial.print(tmps_ecoule);
-  Serial.print("Poul: ");
-  Serial.print(entree_analogique);
-  Serial.println(" ;")
+  if (etat == 1)
+    {
+      return depart= millis();
+    }
+  else
+    {
+      return fin = millis();
+    }
+}
+
+
+int FinalisationDeLaBoucle(int depart, int fin, int dureeBattement, int departEcart)
+{
+if (temps_fin_battement !=0)
+    {
+      Serial.print("Temps de départ du battement :");
+      Serial.println(depart);
+      Serial.print("Temps de fin du battement :");
+      Serial.println(fin);
+      Serial.print("Durrée du battement :");
+      dureeBattement = fin - depart;
+      Serial.println(dureeBattement);
+      depart = 0;
+      fin = 0;
+      return departEcart = millis();
+    }
+}
+
+
+int DeterminationEcartenCours(int depart, int fin, int duree)
+{
+if (depart!=0)
+    {
+      fin=millis();
+      return duree = fin - depart ;
+    }
 }
