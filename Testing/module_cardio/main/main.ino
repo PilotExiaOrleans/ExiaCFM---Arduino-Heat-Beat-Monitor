@@ -42,7 +42,7 @@ void loop() {
       Serial.println(temps_depart_battement);
       Serial.print("Temps de fin du battement :");
       Serial.println(temps_fin_battement);
-      Serial.print("Durrée du battement :");
+      Serial.print("Durée du battement :");
       duree_battement = temps_fin_battement - temps_depart_battement;
       Serial.println(duree_battement);
       temps_depart_battement = 0;
