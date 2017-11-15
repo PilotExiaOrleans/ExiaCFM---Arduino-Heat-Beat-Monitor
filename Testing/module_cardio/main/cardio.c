@@ -1,4 +1,3 @@
-
 short ComplementationValeurIntermediaire(short valeur)
 {
   if (valeur == 1)
