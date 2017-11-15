@@ -17,7 +17,7 @@ pinMode(11, OUTPUT); // LED n°10 (pin 11)
 
 void loop() // Main loop function . . .
 {
-  int delais = 100;
+  int delais = 70;
 
   for (int i=2 ; i<8 ; i++)
   {
