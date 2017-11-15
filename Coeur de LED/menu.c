@@ -11,11 +11,11 @@ void menu(int choix)
     switch (choix)
     {
         case 0 : Toutes_les_LEDs_allumees();break;
-		/*case 1 : Une_LED_sur_2_allumee();break;
+		case 1 : Une_LED_sur_2_allumee();break;
 		case 2 : Une_LED_sur_3_allumee();break;
 		case 3 : Une_LED_allumee_au_choix();break;
 		case 4 : Chenille();break;
 		case 5 : Chargement();break;
-        default : return 0;*/
+        default : return 0;
     }
 }
