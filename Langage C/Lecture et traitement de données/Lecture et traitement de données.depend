@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1510756862 source:c:\users\louis\documents\exia\projets\projet a1-fondamentaux scientifiques -2017-2018 - v2\lecture et traitement de données\main.c
+	<stdio.h>
+	<stdlib.h>
+
+1510757102 source:c:\users\louis\documents\exia\projets\projet a1-fondamentaux scientifiques -2017-2018 - v2\lecture et traitement de données\menu.c
+	<stdio.h>
+	<stdlib.h>
+	"menu.h"
+
+1510757204 c:\users\louis\documents\exia\projets\projet a1-fondamentaux scientifiques -2017-2018 - v2\lecture et traitement de données\menu.h
+
