@@ -1,4 +1,4 @@
-#include "cardio.c"
+#include "cardio.cpp"
 
 short etat = 0;
 short valeur_intermediaire = 0;
