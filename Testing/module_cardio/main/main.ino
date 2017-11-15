@@ -2,15 +2,16 @@
 
 short etat = 0;
 short valeur_intermediaire = 0;
-int temps_actuel = 0;
-int temps_fin_battement = 0; 
-int temps_depart_battement = 0;
+long temps_actuel = 0;
+long temps_fin_battement = 0; 
+long temps_depart_battement = 0;
 int i = 0;
-int duree_battement=0;
+long duree_battement=0;
 int listeBattements[20][2];
-int temps_depart_ecart = 0;
-int temps_fin_ecart = 0;
-int duree_ecart = 0;
+long temps_depart_ecart = 0;
+long temps_fin_ecart = 0;
+long duree_ecart = 0;
+long depart_chrono = 0;
 
 void setup() {
   // Initialization . . .
@@ -36,6 +37,10 @@ void loop() {
     short ComplementationValeurIntermediaire(valeur_intermediaire);
     temps_actuel = millis();
     DeterminationPositionBattement(etat, temps_depart_battement, temps_fin_battement, temps_actuel);
+    if (i == 0)
+    {
+      depart_chrono = millis();
+    }
     if (temps_fin_battement !=0)
     {
       Serial.print("Temps de départ du battement :");
@@ -53,6 +58,7 @@ void loop() {
   
   listeBattements[i][1] = duree_battement;
   listeBattements[i][2] = duree_ecart;
+
   Serial.println(listeBattements[i][1]);
   Serial.println(listeBattements[i][2]);
   i++;

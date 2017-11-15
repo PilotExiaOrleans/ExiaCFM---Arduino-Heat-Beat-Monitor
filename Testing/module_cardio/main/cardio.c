@@ -1,3 +1,4 @@
+
 short ComplementationValeurIntermediaire(short valeur)
 {
   if (valeur == 1)
@@ -11,11 +12,12 @@ short ComplementationValeurIntermediaire(short valeur)
 }
 
 
-int DeterminationPositionBattement(short state, int depart,int fin, int temps)
+long DeterminationPositionBattement(short state, long depart,long fin, long temps)
 {
   if (state == 1)
     {
       depart = temps;
+      
       return depart;
     }
   else
@@ -27,7 +29,7 @@ int DeterminationPositionBattement(short state, int depart,int fin, int temps)
 
 
 
-int DeterminationEcartenCours(int depart, int fin, int duree, int temps)
+long DeterminationEcartenCours(long depart, long fin, long duree, long temps)
 {
 if (depart!=0)
     {
