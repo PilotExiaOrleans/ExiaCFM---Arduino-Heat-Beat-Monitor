@@ -32,11 +32,13 @@ void Toutes_les_LEDs_allumees(???)
 void Une_LED_sur_2_allumee(???)
 {
   int i;
-  int delais=75;
   for (int i=2;i<12;i+=2)
   {
-    digitalWrite(i, HIGH);
-    delay(delais);
+    if(??? > 500)
+    {
+      digitalWrite(i, HIGH);
+    }
+   
     digitalWrite(i, LOW);
   }
 }
@@ -45,14 +47,21 @@ void Une_LED_sur_2_allumee(???)
 void Une_LED_sur_3_allumee(???)
 {
   int i;
-  int delais=75;
   while( i<12)
   {
-    digitalWrite(i, HIGH);
-    delay(delais);
+    if(??? > 500)
+    {
+      digitalWrite(i, HIGH);
+    }
+
     digitalWrite(i, LOW); 
-    if (i>8){i-=7;}
-    else{ i+=3;
+    if (i>8)
+    {
+      i-=7;
+    }
+    else
+    { 
+      i+=3;
   }
 }
 
@@ -66,11 +75,13 @@ void Une_LED_allumee_au_choix(???)
 void Chenille(???)
 {
   int i;
-  int delais;
   for (int i=2;i<12;i+=1)
   {
-    digitalWrite(i, HIGH); 
-    delay(delais);
+    if(??? > 500)
+    {
+      digitalWrite(i, HIGH); 
+    }
+
     digitalWrite(i, LOW);
   }
   
@@ -79,20 +90,26 @@ void Chenille(???)
 // Generation param.h Mode Chargement
 void Chargement(???)
 {
-  int delais = 75;
   
     for (int i=2 ; i<8 ; i++)
     {
       if (i==2 || i==7)
       {
-        digitalWrite(i, HIGH);
+        if(??? > 500)
+        {
+          digitalWrite(i, HIGH); 
+        }
       }
       else
       {
-        digitalWrite(i, HIGH);
-        digitalWrite(14-i, HIGH);
+        if(??? > 500)
+        {
+          digitalWrite(i, HIGH); 
+          digitalWrite(14-i, HIGH);
+        }
+     
       }
-      delay(delais);
+
     }
     for (int i=7 ; i>1 ; i--)
     {
@@ -105,6 +122,6 @@ void Chargement(???)
         digitalWrite(i, LOW);
         digitalWrite(14-i, LOW);
       }
-      delay(delais);
+
     }
 }
