@@ -1,0 +1,6 @@
+#ifndef GENERATIONCODE_H_INCLUDED
+#define GENERATIONCODE_H_INCLUDED
+
+void setParam(int *choix);
+
+#endif // GENERATEUR_CODE_H_INCLUDED
