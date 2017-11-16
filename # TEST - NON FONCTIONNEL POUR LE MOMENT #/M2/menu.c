@@ -1,3 +1,13 @@
+/*
+==================================================================================================
+menu.c - Fonction contenant le menu permettant de choisir le type d'allumage des LEDs.
+==================================================================================================
+Last Verification : 17/11/2017
+Authors : Joel DIDIER, Louis MARJOLET
+Exia CESI A1 - Orleans
+==================================================================================================
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 #include "menu.h"
@@ -11,10 +21,11 @@ void menu(int choix)
 
     // Entree du choix par l'utilisateur
     scanf("%d", &choix);
-    // Choix et appel fonction correspondante
+    // Si le choix entre est inconnu (non compris entre 1 et 6, sujet a changement), on le redemande jusqu'à ce qu'il le soit.
     do
     {
         printf("Choix inconnu . . .\n");
+		scanf("%d", &choix);
     }
-    while(choix < 1 && choix > 5);
+    while(choix < 1 && choix > 6);
 }

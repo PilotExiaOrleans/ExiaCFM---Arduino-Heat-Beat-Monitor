@@ -1,3 +1,13 @@
+/*
+==================================================================================================
+ConvertisseurSerialCSV.pde - Lit et ecrit la valeur du pouls issue depuis la carte Arduino.
+==================================================================================================
+Last Verification : 17/11/2017
+Comments by : Joel DIDIER
+Exia CESI A1 - Orleans
+==================================================================================================
+*/
+
 // From Arduino to Processing to Txt or csv etc.
 
 

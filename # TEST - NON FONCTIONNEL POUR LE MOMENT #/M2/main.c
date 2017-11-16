@@ -1,3 +1,15 @@
+/*
+==================================================================================================
+main.c - Lance la fonction du choix du type d'allumage des LEDs puis lance la fonction d'ecriture
+dans param.h
+==================================================================================================
+Last Verification : 17/11/2017
+Authors : Joel DIDIER, Louis MARJOLET
+Exia CESI A1 - Orleans
+==================================================================================================
+*/
+
+
 #include <stdio.h>
 #include <stdlib.h>
 #include "menu.h"
