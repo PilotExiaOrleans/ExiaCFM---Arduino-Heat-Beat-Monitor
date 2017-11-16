@@ -7,10 +7,13 @@
 void Initialisation()
 {
     FILE *f = NULL;
-    system("md param.h");
-    f=fopen("param.h/param.h.ino", "w");
+    system("md param.h");   // Crée un dossier param.h pour stocker le fichier param.h.ino
+    f=fopen("param.h/param.h.ino", "w");    // Création ou ouverture du fichier param.h.ino
+                                            //Le "w" permet d'écraser ce qu'il y avait deja dans le fichier pour avoir seulement ce que l'on souhaite
+
     if (f!=NULL)
     {
+        // test de l'ouverture du fichier
     }
     else
     {
@@ -18,21 +21,21 @@ void Initialisation()
         exit(EXIT_FAILURE);
     }
     fputs("void setup()", f);
-    fputs("{\n  // Initialization . . .\n", f);
+    fputs("{\n  // Initialization . . .\n", f); //Ecriture du setup dans le fichier
     fputs("pinMode(2, OUTPUT); // LED no1 (pin 2)\npinMode(3, OUTPUT); // LED no2 (pin 3)\npinMode(4, OUTPUT); // LED no3 (pin 4)\npinMode(5, OUTPUT); // LED no4 (pin 5)\npinMode(6, OUTPUT); // LED no5 (pin 6)\npinMode(7, OUTPUT); // LED no6 (pin 7)\npinMode(8, OUTPUT); // LED no7 (pin 8)\npinMode(9, OUTPUT); // LED no8 (pin 9)\npinMode(10, OUTPUT); // LED no9 (pin 10)\npinMode(11, OUTPUT); // LED no10 (pin 11)\n}\n\n", f);
-    fputs("void loop() // Main loop function . . .\n{\n", f);
+    fputs("void loop() // Main loop function . . .\n{\n", f);   // Ecriture du debut de la loupe
     fclose (f);
 }
 
 // Envoi automatique du param.h dans la carte Arduino - merci Bastien Le Gall (Exia A1 Orleans) pour l'astuce
 void Ouverture_Televersement()
 {
-    system("start param.h/param.h.ino");
-    Sleep(7000);
-    keybd_event(VK_CONTROL,0,0,0);                  
-    keybd_event('U',0,0,0);                          
-    keybd_event('U',0,KEYEVENTF_KEYUP,0);            
-    keybd_event(VK_CONTROL,0,KEYEVENTF_KEYUP,0);     
+    system("start param.h/param.h.ino"); //Lance le programme Arduino
+    Sleep(7000);                         //Pause de 7s pour laisser le temps au PC de lancer le programme Arduino
+    keybd_event(VK_CONTROL,0,0,0);
+    keybd_event('U',0,0,0);              //permet de faire ctrl+u, donc de téléverser automatiquement dans notre cas
+    keybd_event('U',0,KEYEVENTF_KEYUP,0);
+    keybd_event(VK_CONTROL,0,KEYEVENTF_KEYUP,0);
 }
 
 // Generation param.h Toutes Les LEDs Allumees
