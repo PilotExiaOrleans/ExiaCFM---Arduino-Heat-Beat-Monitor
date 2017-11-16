@@ -21,3 +21,21 @@
 
 1510829075 c:\users\louis\documents\exia\projets\projet a1-fondamentaux scientifiques -2017-2018 - v2\lecture et traitement de données\actions.h
 
+1510841676 source:c:\users\louis\documents\github\projet-fondamentaux-scientifiques\langage c\lecture et traitement de données\actions.c
+	<stdio.h>
+	<stdlib.h>
+
+1510843957 source:c:\users\louis\documents\github\projet-fondamentaux-scientifiques\langage c\lecture et traitement de données\main.c
+	<stdio.h>
+	<stdlib.h>
+	"donnee.h"
+
+1510843238 source:c:\users\louis\documents\github\projet-fondamentaux-scientifiques\langage c\lecture et traitement de données\menu.c
+	<stdlib.h>
+
+1510843633 source:c:\users\louis\documents\github\projet-fondamentaux-scientifiques\langage c\lecture et traitement de données\donnee.c
+	<stdio.h>
+	<stdlib.h>
+
+1510843957 c:\users\louis\documents\github\projet-fondamentaux-scientifiques\langage c\lecture et traitement de données\donnee.h
+

@@ -1,4 +1,4 @@
-#include <stdio.h>
+/*#include <stdio.h>
 #include <stdlib.h>
 
 void menu(int choix)
@@ -14,8 +14,8 @@ void menu(int choix)
 		case 2 : Rechercher_et_afficher_donnees_en_fonction_du_temps();break;
 		case 3 : Moyenne_pouls();break;
 		case 4 : Afficher_nbr_lignes_de_donnees();break;
-		case 5 : Max_et_Min_pouls();break;*/
+		case 5 : Max_et_Min_pouls();break;
         default : return 0;
     }
 }
-
+*/
