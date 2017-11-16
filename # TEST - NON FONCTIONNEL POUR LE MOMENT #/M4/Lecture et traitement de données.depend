@@ -39,3 +39,35 @@
 
 1510843957 c:\users\louis\documents\github\projet-fondamentaux-scientifiques\langage c\lecture et traitement de données\donnee.h
 
+1510872406 source:c:\users\vazvi\desktop\m4\actions.c
+	<stdio.h>
+	<stdlib.h>
+	"actions.h"
+	"donnee.h"
+
+1510864086 c:\users\vazvi\desktop\m4\actions.h
+
+1510868591 c:\users\vazvi\desktop\m4\donnee.h
+
+1510862359 source:c:\users\vazvi\desktop\m4\donnee.c
+	<stdio.h>
+	<stdlib.h>
+	"donnee.h"
+	"actions.h"
+
+1510866819 source:c:\users\vazvi\desktop\m4\main.c
+	<stdio.h>
+	<stdlib.h>
+	"menu.h"
+	"donnee.h"
+	"actions.h"
+
+1510866685 c:\users\vazvi\desktop\m4\menu.h
+
+1510872487 source:c:\users\vazvi\desktop\m4\menu.c
+	<stdio.h>
+	<stdlib.h>
+	"menu.h"
+	"donnee.h"
+	"actions.h"
+
