@@ -7,7 +7,8 @@ void donnee()
 {
     FILE* fichier = NULL;
     char tab[TAILLE_MAX] = "";
-    int i=0;
+    int i=0, pls;
+    float tps;
     typedef struct Tableau Tableau;
     struct Tableau
     {
@@ -24,9 +25,14 @@ void donnee()
     while(fgets(tab, TAILLE_MAX, fichier) != NULL)//On lit le max TAILLE_MAX caract�res du fichier. On stock le tout dans "chaine".
     {
         //("%s", tab); //test du tableau
-        sscanf(tab, "%f;%d", &tableau[i].temps, &tableau[i].pouls);
-        printf("i= %d ,Temps: %f, Pouls: %d\n",i, tableau[i].temps, tableau[i].pouls);
+        sscanf(tab, "%f;%d", tps, pls);
+        tableau[i].temps=tps;
+        tableau[i].pouls=pls;
         i++;
+    }
+    for (i=0 ; i<TAILLE_MAX ; i++);
+    {
+        printf("Temps: %f, Pouls: %d\n", tableau[i].temps, tableau[i].pouls);
     }
         fclose(fichier);
     }
