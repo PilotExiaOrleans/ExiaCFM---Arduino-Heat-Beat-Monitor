@@ -6,8 +6,9 @@ int valeur_intermediaire = 0;
 long temps_intermediaire = 0;
 //long temps_repere = 0;
 //short etat = 0;
-int i=0,j=0,h=0;
-int m, seuil=10;
+int seuil = 0;
+int entree_analogique;
+int v= 0;
 
 void setup() {
   pinMode(A0, INPUT);
@@ -17,16 +18,28 @@ void setup() {
 
 void loop() {
 
-  int entree_analogique, valeur_repere;
+  int valeur_repere;
   long temps_debut_battement;
 
-  entree_analogique = Simulation(seuil, h, i, j, entree_analogique);
+  if (seuil >= 24)                //Si repere dépasse notre encadrement, il est reinitialisé
+  {  
+    seuil = 0;
+  }
+  entree_analogique = Simulation(v,seuil);
+  seuil++;
+  Serial.println(seuil);
   valeur_repere = 500;
   if (entree_analogique > valeur_repere) {  
-    if (valeur_intermediaire <= temps_intermediaire) {  
+    Serial.println("-----------------------------------");
+    if (valeur_intermediaire <= valeur_repere) {  
+      Serial.println("//////////////////////////:");
       temps_debut_battement = millis();
       if (temps_debut_battement > (temps_intermediaire + 200)){  
-        Serial.println( (1000.0 * 60.0) / (temps_debut_battement - temps_intermediaire),0);
+        Serial.println("1111111111111111111111");
+        long poul = (1000.0 * 60.0) / (temps_debut_battement - temps_intermediaire);
+        Serial.println(temps_debut_battement - temps_intermediaire);
+        Serial.println("222222222222222222222222");
+        Serial.println(poul);
         temps_intermediaire = temps_debut_battement;
       }
     }

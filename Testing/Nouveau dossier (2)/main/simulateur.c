@@ -1,14 +1,13 @@
-int Simulation(int repere, int a, int b, int c, int m)
-{
-for (a=0;a<31;a++)
-{
-  for(b=0;b<repere;b++)
-  {
-  m=rand()%20+340;
+int Simulation(int m,int repere)        //Dans cette fonction, nous simulons des valeurs basses et hautes à intervalle régulier correspondant à la durée d'un battement et l'écart entre deux battements.
+{                                 //Cet intervalle est aléaoire et importe peu, il suffit juste qu'il soit assez grand pour être identifiable par le système
+  if (repere < 12)                //Si repere est inferieur  à 25 (valeur aleatoire), on insere des valeurs correspondant à un etat bas
+  { 
+    m=rand()%20 + 300;       //On affecte la valeur aléatoire basse à 20% autour de 300
   }
-  for(c=0;c<repere;c++)
+  if (repere >=12 && repere <24)  //Si repere est compris entre 25 et 50 (valeurs aleatoires), on insere des valeurs correspondant à un etat haut
   {
-  m=rand()%20+680;
-  }
-}
+    m=rand()%20 + 700;       //On affecte la valeur aléatoire basse à 20% autour de 700
+  } 
+  
+  return m;
 } 
