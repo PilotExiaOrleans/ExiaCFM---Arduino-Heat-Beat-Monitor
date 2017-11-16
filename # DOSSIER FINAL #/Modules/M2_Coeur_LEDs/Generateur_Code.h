@@ -1,4 +1,4 @@
-#ifndef GENERATEUR_CODE_H_INCLUDED
+    #ifndef GENERATEUR_CODE_H_INCLUDED
 #define GENERATEUR_CODE_H_INCLUDED
 
     void Initialisation()
