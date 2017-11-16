@@ -1,10 +1,13 @@
 //#include "cardio.h"
 //#include "cardio.c"
+#include "simulateur.c"
 
 int valeur_intermediaire = 0;
 long temps_intermediaire = 0;
-long temps_repere = 0;
-short etat = 0;
+//long temps_repere = 0;
+//short etat = 0;
+int i=0,j=0,h=0;
+int m, seuil=10;
 
 void setup() {
   pinMode(A0, INPUT);
@@ -17,7 +20,7 @@ void loop() {
   int entree_analogique, valeur_repere;
   long temps_debut_battement;
 
-  entree_analogique = Simulation(temps_repere, etat);
+  entree_analogique = Simulation(seuil, h, i, j, entree_analogique);
   valeur_repere = 500;
   if (entree_analogique > valeur_repere) {  
     if (valeur_intermediaire <= temps_intermediaire) {  
