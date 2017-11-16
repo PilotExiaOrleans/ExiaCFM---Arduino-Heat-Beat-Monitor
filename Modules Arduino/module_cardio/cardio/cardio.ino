@@ -1,4 +1,4 @@
-//#include "cardio.h"
+#include "cardio.h"
 
 
 short ComplementationValeurIntermediaire(valeur)

@@ -1,10 +1,14 @@
 #include <stdio.h>
 #include <stdlib.h>
+//#include "menu.h"
+//#include "donnee.h"
+//#include "actions.h"
 
 int main()
 {
     int choix;
-    printf("Coucou mes petits bichons, alors aujourd'hui on se retrouve pour un unboxing de mascara!!!\n");
+    donnee();
+    printf("Choisissez l'affichage des donn%ces du pouls\n", 130);
     menu(choix);
     return 0;
 }
