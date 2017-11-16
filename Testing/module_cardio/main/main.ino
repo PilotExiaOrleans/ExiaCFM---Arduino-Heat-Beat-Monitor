@@ -1,4 +1,5 @@
 #include "cardio.c"
+#include "simulateur.c.ino"
 
 short etat = 0;
 short valeur_intermediaire = 0;
@@ -12,6 +13,8 @@ long temps_depart_ecart = 0;
 long temps_fin_ecart = 0;
 long duree_ecart = 0;
 long depart_chrono = 0;
+short repere = 0;
+long temps_repere = 0;
 
 void setup() {
   // Initialization . . .
@@ -20,7 +23,9 @@ void setup() {
 }
 
 void loop() {
-  int entree_analogique = analogRead(A0);
+  
+  //int entree_analogique = analogRead(A0);
+  int entree_analogiue = Simulation(temps_repere, repere, entree_analogique)
   if (entree_analogique <=511)
   {
     etat = 0;
