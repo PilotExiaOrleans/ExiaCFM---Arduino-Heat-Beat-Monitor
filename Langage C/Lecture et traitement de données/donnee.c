@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#define TAILLE_MAX 5010 //Taille du tableau à 5010
+#define TAILLE_MAX 5010 //Taille du tableau ï¿½ 5010
 
 
 void donnee()
@@ -12,16 +12,16 @@ void donnee()
 
     if (fichier != NULL)
     {
-    while(fgets(tab, TAILLE_MAX, fichier) != NULL)//On lit le max TAILLE_MAX caractères du fichier. On stock le tout dans "chaine".
+    while(fgets(tab, TAILLE_MAX, fichier) != NULL)//On lit le max TAILLE_MAX caractï¿½res du fichier. On stock le tout dans "chaine".
     {
-        fgets(tab, TAILLE_MAX, fichier);
+        sscanf(tab, "%d;%d", &temps, &pouls);
         printf("%s", tab);
     }
         fclose(fichier);
     }
     else
     {
-        // On affiche un message d'erreur en cas d'échec
+        // On affiche un message d'erreur en cas d'ï¿½chec
         printf("Impossible d'ouvrir le fichier jeu_de_donnees_test.csv");
     }
 }
