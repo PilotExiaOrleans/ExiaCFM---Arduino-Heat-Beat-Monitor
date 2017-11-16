@@ -1,3 +1,5 @@
+#include "generationCode.h"
+
 void setParam(int *choix)
 {
     FILE *f = NULL;
