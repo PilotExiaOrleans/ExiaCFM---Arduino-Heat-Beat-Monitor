@@ -19,7 +19,7 @@ void setParam(int *choix)
     f=fopen("param.h", "w");
     if (f!=NULL)
     {
-        sprintf(choice, "#define LEDPARAM %d", *choix);
+        sprintf(choice, "#define LEDPARAM %d", *choix); // Ecriture de la declaration de la variable LEDPARAM (choix de l'user)
     }
     else
     {
