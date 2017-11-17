@@ -47,6 +47,7 @@ gcc -Wall -o main.o menu.o generationCode.o
 Livrables\Modules\M2_Coeur_LEDs\generationCode
 ```
 
+puis compilez.
 
 ### Étape 2.2 - Lancement de l'affichage des LEDs
 (Soon.)
