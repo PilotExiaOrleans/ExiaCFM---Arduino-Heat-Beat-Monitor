@@ -1,4 +1,3 @@
-//#include "cardio.h"
 #include "cardio.c"
 #include "simulateur.c"
 
