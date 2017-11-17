@@ -29,9 +29,9 @@ Pour exploiter au mieux ce projet, il est nécessaire de posséder :
 
 ### Étape 2.1 - Choix du type d'affichage des LEDs
 
-OPTION 1 (Méthode simple) : Exécuter le fichier generationCode.exe situé dans Livrables\Modules\M2_Coeur_LEDs\generationCode\bin
+**OPTION 1 (Méthode simple) :** Exécuter le fichier generationCode.exe situé dans Livrables\Modules\M2_Coeur_LEDs\generationCode\bin
 
-OPTION 2 (Ligne de commande) : Exécuter les commandes suivantes (vérifiez que gcc a été déclaré dans path si nécessaire) :
+**OPTION 2 (Ligne de commande) :** Exécuter les commandes suivantes (vérifiez que gcc a été déclaré dans path si nécessaire) :
 ```
 gcc -Wall -c main.c menu.c generationCode.c
 ```
@@ -39,7 +39,7 @@ gcc -Wall -c main.c menu.c generationCode.c
 ```
 gcc -Wall -o main.o menu.o generationCode.o
 ```
-OPTION 3 (IDE) : Ouvrir le fichier generationCode.cbp situé dans Livrables\Modules\M2_Coeur_LEDs\generationCode
+**OPTION 3 (IDE) :** Ouvrir le fichier generationCode.cbp situé dans Livrables\Modules\M2_Coeur_LEDs\generationCode
 
 
 ### Étape 2.2 - Lancement de l'affichage des LEDs
