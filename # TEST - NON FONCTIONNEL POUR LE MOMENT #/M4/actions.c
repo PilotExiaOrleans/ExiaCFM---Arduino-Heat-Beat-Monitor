@@ -19,7 +19,8 @@ void affichage_tableau(structure tableau[], int TAILLE) // Cette fonction sert à
 void tri_bulles_croissant_par_temps(structure tabl[], int Taille)
 {
     short tab_en_ordre = 0;
-    int temp;
+    float temp;
+    int temp_2;
     while(!tab_en_ordre)
     {
         tab_en_ordre = 1;
@@ -31,6 +32,9 @@ void tri_bulles_croissant_par_temps(structure tabl[], int Taille)
                 temp = tabl[i].temps;
                 tabl[i].temps = tabl[i+1].temps;
                 tabl[i+1].temps = temp;
+                temp_2 = tabl[i].pouls;
+                tabl[i].pouls = tabl[i+1].pouls;
+                tabl[i+1].pouls = temp_2;
                 tab_en_ordre = 0;
             }
         }
@@ -46,6 +50,7 @@ void tri_bulles_croissant_par_pouls(structure tabl[], int Taille)
 {
     short tab_en_ordre = 0;
     int temp;
+    float temp_2;
     while(!tab_en_ordre)
     {
         tab_en_ordre = 1;
@@ -57,6 +62,9 @@ void tri_bulles_croissant_par_pouls(structure tabl[], int Taille)
                 temp = tabl[i].pouls;
                 tabl[i].pouls = tabl[i+1].pouls;
                 tabl[i+1].pouls = temp;
+                temp_2 = tabl[i].temps;
+                tabl[i].temps = tabl[i+1].temps;
+                tabl[i+1].temps = temp_2;
                 tab_en_ordre = 0;
             }
         }
@@ -72,6 +80,7 @@ void tri_bulles_decroissant_par_temps(structure tabl[], int Taille)
 {
     short tab_en_ordre = 0;
     float temp;
+    int temp_2;
     while(!tab_en_ordre)
     {
         tab_en_ordre = 1;
@@ -83,6 +92,9 @@ void tri_bulles_decroissant_par_temps(structure tabl[], int Taille)
                 temp = tabl[i].temps;
                 tabl[i].temps = tabl[i+1].temps;
                 tabl[i+1].temps = temp;
+                temp_2 = tabl[i].pouls;
+                tabl[i].pouls = tabl[i+1].pouls;
+                tabl[i+1].pouls = temp_2;
                 tab_en_ordre = 0;
             }
         }
@@ -98,6 +110,7 @@ void tri_bulles_decroissant_par_pouls(structure tabl[], int Taille)
 {
     short tab_en_ordre = 0;
     int temp;
+    float temp_2;
     while(!tab_en_ordre)
     {
         tab_en_ordre = 1;
@@ -109,6 +122,9 @@ void tri_bulles_decroissant_par_pouls(structure tabl[], int Taille)
                 temp = tabl[i].pouls ;
                 tabl[i].pouls  = tabl[i+1].pouls ;
                 tabl[i+1].pouls  = temp;
+                temp_2 = tabl[i].temps ;
+                tabl[i].temps  = tabl[i+1].temps ;
+                tabl[i+1].temps  = temp_2;
                 tab_en_ordre = 0;
             }
         }
@@ -123,9 +139,9 @@ void tri_bulles_decroissant_par_pouls(structure tabl[], int Taille)
 int Rechercher_et_afficher_donnees_en_fonction_du_temps(structure tab[], int nb_lignes)
     {
     tri_bulles_croissant_par_temps(tab, nb_lignes); //tri du tableau
-    int val;
+    float val;
     printf("Inserer la valeur que vous souhaitez rechercher :");
-    scanf("%d", &val);
+    scanf("%f", &val);
     int position;
     int id, ifin, im; //indice de début, indice de fin et indice de milieu.
     id = 0;         // intervalle de recherche compris entre 0,
@@ -139,11 +155,12 @@ int Rechercher_et_afficher_donnees_en_fonction_du_temps(structure tab[], int nb_
          else if (val > tab[im].temps)
                id=im+1;
          else                               //Si elle n'est ni supérieure ni inférieure, elle est égale,
-               position=im;                 //le pouls cherché est trouvé
+               position=im;               //le pouls cherché est trouvé
         }
     if (position != -1)                     //Si la valeur est trouvée, on la retourne
 
-        return (tab[position].pouls);
+        printf("%d",
+               tab[position].pouls);
 
     else                                    //Sinon cela signifie que la valeur n'existe pas
 
@@ -194,19 +211,11 @@ void Ordre_croissant_ou_decroissant(structure tab[], int nb_lignes)
         {
             printf("Classement selon temps par ordre decroissant");     //... 1 , selon le temps par ordre décroissant
             tri_bulles_decroissant_par_temps(tab,nb_lignes);            //Appel de la fonction réalisant la tâche souhaitée
-            for (i=0; i<nb_lignes; i++)
-            {
-                printf("%l",tab[i].temps);
-            }
         }
         else if (choix2 == 1)
         {
             printf("Classement selon pouls par ordre decroissant");     //... 1 , selon le pouls par ordre décroissant
             tri_bulles_decroissant_par_pouls(tab,nb_lignes);            //Appel de la fonction réalisant la tâche souhaitée
-            for (i=0; i<nb_lignes; i++)
-            {
-                printf("%d",tab[i].pouls);
-            }
         }
         else                                        //Envoie un message d'erreur si le choix2 rentré n'est pas valide
         {
@@ -233,7 +242,8 @@ int Moyenne_pouls(structure tab[], int nb_lignes)
     {
         somme += tab[i].pouls;
     }
-    return (somme/nb_lignes);       //Nous divisons la somme par le nombre total afin d'obtenir la moyenne
+    int resultat = somme/nb_lignes;
+    printf("Le pouls est d'en moyenne %d battements par minute",resultat);       //Nous divisons la somme par le nombre total afin d'obtenir la moyenne
 }
 
 //--------------------------------------------------------------------------------------
@@ -241,7 +251,7 @@ int Moyenne_pouls(structure tab[], int nb_lignes)
 //Cette fonction affiche le nombre de ligne du tableau utilisées pour stocker des données
 void Afficher_nbr_lignes_de_donnees(structure tab[],int nb_lignes)
 {
-    printf("Nous trouvons %d de donnees",nb_lignes);    //Nous avons déjà une fonction réalisant cette tâches dans donnee.c
+    printf("Nous trouvons %d lignes de donnees",nb_lignes);    //Nous avons déjà une fonction réalisant cette tâches dans donnee.c
 }
 
 //--------------------------------------------------------------------------------------
