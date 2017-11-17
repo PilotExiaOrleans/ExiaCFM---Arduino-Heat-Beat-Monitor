@@ -14,24 +14,24 @@ Exia CESI A1 - Orleans
 #include "coeur.h"
 #include "param.h"
 
-void AffichagePulsations (int ???)
+void AffichagePulsations ()
 {
     switch(LEDPARAM) // On recupere la valeur de LEDPARAM correspondant au choix de l'utilisateur
 	// Rentre dans la fonction correspondante a LEDPARAM
-    case 1:Toutes_les_LEDs_allumees(???);break;
-    case 2:Une_LED_sur_2_allumee(???);break;
-    case 3:Une_LED_sur_3_allumee(???);break;
-    case 4:Une_LED_allumee_au_choix(???);break;
-    case 5:Chenille(???);break;
-    case 6:Chargement(???);break;
+    case 1:Toutes_les_LEDs_allumees(val_pouls);break;
+    case 2:Une_LED_sur_2_allumee((val_pouls);break;
+    case 3:Une_LED_sur_3_allumee((val_pouls);break;
+    case 4:Une_LED_allumee_au_choix((val_pouls);break;
+    case 5:Chenille((val_pouls);break;
+    case 6:Chargement((val_pouls);break;
 }
 
-void Toutes_les_LEDs_allumees(???)
+void Toutes_les_LEDs_allumees((val_pouls)
 {
     int i;
     for(i = 2; i <= 11 ; i++)
     {
-      if(??? > 500) // Si pulsation (valeur analogique) a l'etat haut ...
+      if((val_pouls == 1) // Si pulsation (valeur analogique) a l'etat haut ...
       {
         digitalWrite(i, HIGH);
       }
@@ -42,12 +42,12 @@ void Toutes_les_LEDs_allumees(???)
 }
 
 // Generation param.h 1 LED sur 2 Allumee
-void Une_LED_sur_2_allumee(???)
+void Une_LED_sur_2_allumee((val_pouls)
 {
   int i;
   for (int i=2;i<12;i+=2)
   {
-    if(??? > 500) // Si pulsation (valeur analogique) a l'etat haut ...
+    if((val_pouls == 1) // Si pulsation (valeur analogique) a l'etat haut ...
     {
       digitalWrite(i, HIGH);
     }
@@ -57,12 +57,12 @@ void Une_LED_sur_2_allumee(???)
 }
 
 // Generation param.h 1 LED sur 3 Allumee
-void Une_LED_sur_3_allumee(???)
+void Une_LED_sur_3_allumee((val_pouls)
 {
   int i;
   while( i<12)
   {
-    if(??? > 500) // Si pulsation (valeur analogique) a l'etat haut ...
+    if((val_pouls == 1) // Si pulsation (valeur analogique) a l'etat haut ...
     {
       digitalWrite(i, HIGH);
     }
@@ -79,18 +79,18 @@ void Une_LED_sur_3_allumee(???)
 }
 
 // Generation param.h 1 LED Allumee Au Choix
-void Une_LED_allumee_au_choix(???)
+void Une_LED_allumee_au_choix((val_pouls)
 {
   
 }
 
 // Generation param.h Mode Chenille
-void Chenille(???)
+void Chenille((val_pouls)
 {
   int i;
   for (int i=2;i<12;i+=1)
   {
-    if(??? > 500) // Si pulsation (valeur analogique) a l'etat haut ...
+    if((val_pouls == 1) // Si pulsation (valeur analogique) a l'etat haut ...
     {
       digitalWrite(i, HIGH); 
     }
@@ -101,21 +101,21 @@ void Chenille(???)
 }
 
 // Generation param.h Mode Chargement
-void Chargement(???)
+void Chargement((val_pouls)
 {
   
     for (int i=2 ; i<8 ; i++)
     {
       if (i==2 || i==7)
       {
-        if(??? > 500) // Si pulsation (valeur analogique) a l'etat haut ...
+        if((val_pouls == 1) // Si pulsation (valeur analogique) a l'etat haut ...
         {
           digitalWrite(i, HIGH); 
         }
       }
       else
       {
-        if(??? > 500) // Si pulsation (valeur analogique) a l'etat haut ...
+        if((val_pouls == 1) // Si pulsation (valeur analogique) a l'etat haut ...
         {
           digitalWrite(i, HIGH); 
           digitalWrite(14-i, HIGH);
