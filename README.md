@@ -29,7 +29,9 @@ Pour exploiter au mieux ce projet, il est nécessaire de posséder :
 
 ### Étape 2.1 - Choix du type d'affichage des LEDs
 
-**OPTION 1 (Méthode simple) :** Exécuter le fichier generationCode.exe situé dans Livrables\Modules\M2_Coeur_LEDs\generationCode\bin
+**OPTION 1 (Méthode simple) :** Exécuter le fichier generationCode.exe situé dans ```
+Livrables\Modules\M2_Coeur_LEDs\generationCode\bin
+```
 
 **OPTION 2 (Ligne de commande) :** Exécuter les commandes suivantes (vérifiez que gcc a été déclaré dans path si nécessaire) :
 ```
@@ -39,7 +41,9 @@ gcc -Wall -c main.c menu.c generationCode.c
 ```
 gcc -Wall -o main.o menu.o generationCode.o
 ```
-**OPTION 3 (IDE) :** Ouvrir le fichier generationCode.cbp situé dans Livrables\Modules\M2_Coeur_LEDs\generationCode
+**OPTION 3 (IDE) :** Ouvrir le fichier generationCode.cbp situé dans ```
+Livrables\Modules\M2_Coeur_LEDs\generationCode
+```
 
 
 ### Étape 2.2 - Lancement de l'affichage des LEDs
@@ -49,14 +53,18 @@ gcc -Wall -o main.o menu.o generationCode.o
 ## Étape 3 - Lancement de l'acquisition des données avec Processing (Module 3)
 1) Branchez la carte Arduino
 2) Branchez le capteur sur le port A0 de la carte Arduino
-3) Ouvrez le fichier ConvertisseurSerialCSV.pde avec Processing, situé dans Livrables\Modules\M3_Processing_Acquisition_Donnees
+3) Ouvrez le fichier ConvertisseurSerialCSV.pde avec Processing, situé dans ```
+Livrables\Modules\M3_Processing_Acquisition_Donnees
+```
 4) Lancez le programme.
 5) Un fichier "Battements.csv" sera créé dans le même dossier que le programme.
 
 
 ## Étape 4 - Lancement du tri des données (Module 4)
 1) Copiez le fichier csv généré (nommez-le jeu_de_donnees_test.csv) dans le même dossier que l'exécutable "Lecture et traitement de données.exe"
-(L'exécutable est situé dans le dossier suivant : Livrables\Modules\M4_Lecture_Traitement_Donnees\bin\Debug)
+(L'exécutable est situé dans le dossier suivant : ```
+Livrables\Modules\M4_Lecture_Traitement_Donnees\bin\Debug)
+```
 2) Lancez le programme
 
 
