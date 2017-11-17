@@ -120,13 +120,16 @@ void tri_bulles_decroissant_par_pouls(structure tabl[], int Taille)
 //--------------------------------------------------------------------------------------
 
 //Cette fonction tri et recherche un pouls en fonction de son temps correspondant
-int Rechercher_et_afficher_donnees_en_fonction_du_temps(structure tab[], int nbVal, int val, int nb_lignes)
+int Rechercher_et_afficher_donnees_en_fonction_du_temps(structure tab[], int nb_lignes)
     {
     tri_bulles_croissant_par_temps(tab, nb_lignes); //tri du tableau
+    int val;
+    printf("Inserer la valeur que vous souhaitez rechercher :");
+    scanf("%d", &val);
     int position;
     int id, ifin, im; //indice de début, indice de fin et indice de milieu.
     id = 0;         // intervalle de recherche compris entre 0,
-    ifin = nbVal-1; // ,et nbVal.
+    ifin = nb_lignes-1; // ,et le nombre de lignes.
     position = -1;  //position initialisée à -1
     while ((id<=ifin) && (position==-1))    //tant que nous ne sommes pas arrivés à la fin de l'intervalle et que position n'a pas changé
         {

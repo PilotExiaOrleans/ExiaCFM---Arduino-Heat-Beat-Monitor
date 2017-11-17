@@ -3,7 +3,7 @@
 #include "donnee.h"
 #include "actions.h"
 
-void RemplirTableau (structure tab[], int *n)
+void RemplirTableau (structure tab[], int n)
 {
 
    char buffer[2048];
@@ -30,7 +30,7 @@ void RemplirTableau (structure tab[], int *n)
         rec = strtok(NULL,";");
      }
      ++i ;
-    *n=*n+1;
+    n=n+1;
 
 
    }

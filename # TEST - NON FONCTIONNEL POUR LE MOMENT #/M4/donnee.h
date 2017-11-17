@@ -10,6 +10,6 @@ typedef struct structure
 
 }structure;
 
-void RemplirTableau (structure tab[], int *n);
+void RemplirTableau (structure tab[], int n);
 
 #endif // DONNEE_H_INCLUDED
