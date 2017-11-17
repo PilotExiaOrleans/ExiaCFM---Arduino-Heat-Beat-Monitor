@@ -69,7 +69,7 @@ OPTION 3 (IDE) : Ouvrir le fichier generationCode.cbp situé dans Livrables\Modu
 * [Processing 3.3.6](https://processing.org/download/) - Used to generate RSS Feeds
 * [gcc version 6.3.0 (MinGW.org GCC-6.3.0-1)](https://gcc.gnu.org/) - Compilateur C
 
-### Authors
+### Auteurs
 
 * **Joël Didier** - *Chef de projet* - [Studisys](https://github.com/Studisys)
 * **Vicente Vaz** - [Trapadore](https://github.com/Trapadore)
