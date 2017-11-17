@@ -83,6 +83,7 @@ Livrables\Modules\M4_Lecture_Traitement_Donnees\bin\Debug)
 * [gcc version 6.3.0 (MinGW.org GCC-6.3.0-1)](https://gcc.gnu.org/) - Compilateur C
 
 ### Auteurs
+** Exia CESI Orléans **
 
 * **Joël Didier** - *Chef de projet* - [Studisys](https://github.com/Studisys)
 * **Vicente Vaz** - [Trapadore](https://github.com/Trapadore)
