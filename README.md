@@ -18,23 +18,23 @@ Pour exploiter au mieux ce projet, il est nécessaire de posséder :
 
 ## Étape 1 - Lancement du cardiofréquencemètre (Module 1)
 
-1) Ouvrir le fichier main.ino situé dans Livrables\Modules\M1_Cardio\main
-2) Brancher la carte Arduino
-3) Sélectionner le port dans le logiciel
-4) Téléverser le programme dans la carte Arduino
-5) Vérifier les mesures dans la console
+1) Ouvrez le fichier main.ino situé dans Livrables\Modules\M1_Cardio\main
+2) Branchez la carte Arduino
+3) Sélectionnez le port dans le logiciel
+4) Téléversez le programme dans la carte Arduino
+5) Vérifiez les mesures dans la console
 
 
 ## Étape 2 - Lancement du Coeur de LEDs (Module 2)
 
 ### Étape 2.1 - Choix du type d'affichage des LEDs
 
-**OPTION 1 (Méthode simple) :** Exécuter le fichier generationCode.exe situé dans 
+**OPTION 1 (Méthode simple) :** Exécutez le fichier generationCode.exe situé dans 
 ```
 Livrables\Modules\M2_Coeur_LEDs\generationCode\bin
 ```
 
-**OPTION 2 (Ligne de commande) :** Exécuter les commandes suivantes (vérifiez que gcc a été déclaré dans path si nécessaire) :
+**OPTION 2 (Ligne de commande) :** Exécutez les commandes suivantes (vérifiez que gcc a été déclaré dans path si nécessaire) :
 ```
 gcc -Wall -c main.c menu.c generationCode.c
 ```
@@ -42,7 +42,7 @@ gcc -Wall -c main.c menu.c generationCode.c
 ```
 gcc -Wall -o main.o menu.o generationCode.o
 ```
-**OPTION 3 (IDE) :** Ouvrir le fichier generationCode.cbp situé dans 
+**OPTION 3 (IDE) :** Ouvrez le fichier generationCode.cbp situé dans 
 ```
 Livrables\Modules\M2_Coeur_LEDs\generationCode
 ```
