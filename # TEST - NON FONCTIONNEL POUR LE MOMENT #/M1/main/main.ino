@@ -9,6 +9,7 @@ int entree_analogique;
 int v= 0;
 int valeur_repere, repere_battement=10000;
 long temps_debut_poul;
+int choix = 1;
 
 void setup() {
   pinMode(A0, INPUT);
@@ -21,7 +22,18 @@ void loop() {
   {  
     seuil = 0;
   }
-  entree_analogique = Simulation(v,seuil,repere_battement);
+  if (choix == 0)
+  {
+    entree_analogique = analogRead(0);
+  }
+  else if (choix == 1)
+  {
+    entree_analogique = Simulation(v,seuil,repere_battement);
+  }
+  else
+  {
+    Serial.println("Ce n'est pas un choix valide");
+  }
   seuil++;
   valeur_repere = 500;
   if (entree_analogique > valeur_repere) {  
