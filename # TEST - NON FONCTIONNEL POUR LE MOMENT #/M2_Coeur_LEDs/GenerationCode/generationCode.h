@@ -12,6 +12,6 @@ Exia CESI A1 - Orleans
 #ifndef GENERATIONCODE_H_INCLUDED
 #define GENERATIONCODE_H_INCLUDED
 
-void setParam(int *choix);
+void setParam(int choix);
 
 #endif // GENERATEUR_CODE_H_INCLUDED
