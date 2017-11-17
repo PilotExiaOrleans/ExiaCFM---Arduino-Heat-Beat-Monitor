@@ -1,4 +1,14 @@
-// From Arduino to Processing to Txt or cvs etc.
+/*
+==================================================================================================
+ConvertisseurSerialCSV.pde - Lit et ecrit la valeur du pouls issue depuis la carte Arduino.
+==================================================================================================
+Last Verification : 17/11/2017
+Comments by : Joel DIDIER
+Exia CESI A1 - Orleans
+==================================================================================================
+*/
+
+// From Arduino to Processing to Txt or csv etc.
 
 
 // Import Librairies
@@ -10,7 +20,7 @@ Serial udSerial;
 
 void setup() 
 {
-  // INIT liaison serie, ici port A0 a 9600 bauds
+  // INIT liaison serie, a 9600 bauds
   udSerial = new Serial(this, Serial.list()[0], 9600);
   // Creation fichier sortie Battements.csv
   output = createWriter ("Battements.csv");
