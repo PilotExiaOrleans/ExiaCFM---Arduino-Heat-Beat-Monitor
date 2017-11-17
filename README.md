@@ -4,7 +4,7 @@
 
 
 
-### Pré-requis
+# Pré-requis
 
 Pour exploiter au mieux ce projet, il est nécessaire de posséder :
 - un compilateur (GCC) associé, éventuellement, à un IDE (Code:Blocks, Visual Studio, ...)
