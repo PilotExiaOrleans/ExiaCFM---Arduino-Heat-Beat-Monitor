@@ -71,14 +71,14 @@ void tri_bulles_croissant_par_pouls(structure tabl[], int Taille)
 void tri_bulles_decroissant_par_temps(structure tabl[], int Taille)
 {
     short tab_en_ordre = 0;
-    int temp;
+    float temp;
     while(!tab_en_ordre)
     {
         tab_en_ordre = 1;
         int i;
         for(i=0 ; i < Taille ; i++)
         {
-            if(tabl[i].temps < tabl[i+1].temps) //Si la valeur de rang i est inférieure à celle de rang i+1,
+            if(tabl[i].temps < tabl[i+1].temps) //Si la valeur de rang i est supérieure à celle de rang i+1,
             {                                   //nous les interchangeons
                 temp = tabl[i].temps;
                 tabl[i].temps = tabl[i+1].temps;
