@@ -92,4 +92,4 @@ Livrables\Modules\M4_Lecture_Traitement_Donnees\bin\Debug)
 
 ### Licence
 
-Licence MIT - voir le fichier [LICENSE.md](https://github.com/Studisys/ExiaCFM---Arduino-Heat-Beat-Monitor/blob/master/README.md) pour plus de détails.
+Licence MIT - voir le fichier [LICENSE.md](https://github.com/Studisys/ExiaCFM---Arduino-Heat-Beat-Monitor/blob/master/LICENSE) pour plus de détails.
