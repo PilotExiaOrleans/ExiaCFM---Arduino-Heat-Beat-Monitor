@@ -4,12 +4,12 @@
 #include "donnee.h"
 
 
-void affichage_tableau(structure TABLEAU[], int TAILLE) // Cette fonction sert à afficher toutes le contenu d'un tableau structure
+void affichage_tableau(structure tableau[], int TAILLE) // Cette fonction sert à afficher toutes le contenu d'un tableau structure
 {
     int i;
-    for (i=0; i> (TAILLE+1); i++)
+    for (i=0; i< (TAILLE+1); i++)
     {
-        printf("Pouls : %d\t/\tTemps : %d", TABLEAU[i].pouls, TABLEAU[i].temps); //Affichage des composantes de rang i+1
+        printf("Temps : %f\t/\tPouls : %d\n", tableau[i].temps, tableau[i].pouls); //Affichage des composantes de rang i+1
     }
 }
 
@@ -24,7 +24,7 @@ void tri_bulles_croissant_par_temps(structure tabl[], int Taille)
     {
         tab_en_ordre = 1;
         int i;
-        for(i=0 ; i < Taille-1 ; i++)
+        for(i=0 ; i < Taille ; i++)
         {
             if(tabl[i].temps > tabl[i+1].temps) //Si la valeur de rang i est supérieure à celle de rang i+1,
             {                                   //nous les interchangeons
@@ -50,7 +50,7 @@ void tri_bulles_croissant_par_pouls(structure tabl[], int Taille)
     {
         tab_en_ordre = 1;
         int i;
-        for(i=0 ; i < Taille-1 ; i++)
+        for(i=0 ; i < Taille ; i++)
         {
             if(tabl[i].pouls < tabl[i+1].pouls) //Si la valeur de rang i est supérieure à celle de rang i+1,
             {                                   //nous les interchangeons
@@ -71,14 +71,14 @@ void tri_bulles_croissant_par_pouls(structure tabl[], int Taille)
 void tri_bulles_decroissant_par_temps(structure tabl[], int Taille)
 {
     short tab_en_ordre = 0;
-    int temp;
+    float temp;
     while(!tab_en_ordre)
     {
         tab_en_ordre = 1;
         int i;
-        for(i=0 ; i < Taille-1 ; i++)
+        for(i=0 ; i < Taille ; i++)
         {
-            if(tabl[i].temps < tabl[i+1].temps) //Si la valeur de rang i est inférieure à celle de rang i+1,
+            if(tabl[i].temps < tabl[i+1].temps) //Si la valeur de rang i est supérieure à celle de rang i+1,
             {                                   //nous les interchangeons
                 temp = tabl[i].temps;
                 tabl[i].temps = tabl[i+1].temps;
@@ -102,7 +102,7 @@ void tri_bulles_decroissant_par_pouls(structure tabl[], int Taille)
     {
         tab_en_ordre = 1;
         int i;
-        for(i=0 ; i < Taille-1 ; i++)
+        for(i=0 ; i < Taille; i++)
         {
             if(tabl[i].pouls < tabl[i+1].pouls )//Si la valeur de rang i est inférieure à celle de rang i+1,
             {                                   //nous les interchangeons
@@ -175,19 +175,11 @@ void Ordre_croissant_ou_decroissant(structure tab[], int nb_lignes)
         {
             printf("Classement selon temps par ordre croissant");  //... 1 , selon le temps par ordre croissant
             tri_bulles_croissant_par_temps(tab,nb_lignes);         //Appel de la fonction réalisant la tâche souhaitée
-            for (i=0; i<nb_lignes; i++)
-            {
-                printf("%l",tab[i].temps);
-            }
         }
         else if (choix2 == 1)
         {
-            printf("Classement selon pouls par ordre croissant");   //... 2 , selon le pouls par ordre croissant
+            printf("Classement selon pouls par ordre croissant\n");   //... 2 , selon le pouls par ordre croissant
             tri_bulles_croissant_par_pouls(tab,nb_lignes);          //Appel de la fonction réalisant la tâche souhaitée
-            for (i=0; i<nb_lignes; i++)
-            {
-                printf("%d",tab[i].pouls);
-            }
 
         }
         else

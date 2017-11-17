@@ -6,8 +6,8 @@
 
 int main()
 {
-    int n = 10000;
+    int n = 5000;
     structure tableau_donnees[n];       //Declaration d'un tableau de 10000 lignes de type structure défini dans donnee.h
-    RemplirTableau(tableau_donnees,n);  //La tableau defini precedemment est rempli avec les valeurs du fichier .csv
+    RemplirTableau(tableau_donnees,n);
     menu(tableau_donnees,n);            //Appel du menu
 }
