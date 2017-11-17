@@ -20,7 +20,7 @@ Serial udSerial;
 
 void setup() 
 {
-  // INIT liaison serie, ici port A0 a 9600 bauds
+  // INIT liaison serie, a 9600 bauds
   udSerial = new Serial(this, Serial.list()[0], 9600);
   // Creation fichier sortie Battements.csv
   output = createWriter ("Battements.csv");
