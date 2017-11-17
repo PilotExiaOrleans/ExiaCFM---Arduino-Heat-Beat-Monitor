@@ -60,6 +60,8 @@ OPTION 3 (IDE) : Ouvrir le fichier generationCode.cbp situé dans Livrables\Modu
 2) Lancez le programme
 
 
+# A propos . . .
+
 ### Conçu avec :
 
 * [Code::Blocks 16.01](http://www.codeblocks.org/downloads) - IDE pour les programmes en C
