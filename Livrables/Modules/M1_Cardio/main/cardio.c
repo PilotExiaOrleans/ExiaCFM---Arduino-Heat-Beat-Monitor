@@ -16,9 +16,3 @@ long CalculPoul(long tempspoul, long tempsIntermediaire)
   return (1000.0 * 60.0) / (tempspoul - tempsIntermediaire); //Dans ce calcul, nous convertissons la difference du temps lors de la detection d'un pouls
 }                                                            //et du temps de detection d'un precedent pouls
 
-long GetPulseVal(long AnalogVar, int analogPin)
-{
-	analogPin = 0;
-	AnalogVar = analogRead(analogPin)
-	return AnalogVar;
-}
