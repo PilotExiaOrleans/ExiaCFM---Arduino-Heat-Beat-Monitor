@@ -1,0 +1,22 @@
+# depslib dependency file v1.0
+1510914845 source:c:\users\1872198\desktop\module\generateur\generationcode.c
+	"generationCode.h"
+	"menu.h"
+
+1510914458 c:\users\1872198\desktop\module\generateur\menu.h
+	<stdio.h>
+	<stdlib.h>
+
+1510871503 c:\users\1872198\desktop\module\generateur\generationcode.h
+
+1510914859 source:c:\users\1872198\desktop\module\generateur\main.c
+	<stdio.h>
+	<stdlib.h>
+	"menu.h"
+	"generationCode.h"
+
+1510914403 source:c:\users\1872198\desktop\module\generateur\menu.c
+	<stdio.h>
+	<stdlib.h>
+	"menu.h"
+

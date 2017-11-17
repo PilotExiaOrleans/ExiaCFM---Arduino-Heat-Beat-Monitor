@@ -1,0 +1,1 @@
+/* Le contenu de ce fichier (dont ce commentaire) sera efface lors de l'execution du generateur. */

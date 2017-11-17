@@ -13,6 +13,6 @@ Exia CESI A1 - Orleans
 #include <stdio.h>
 #include <stdlib.h>
 
-void menu(int *choix);
+void menu(unsigned int *choix); // Prototype de la fonction menu
 
 #endif // MENU_H_INCLUDED
