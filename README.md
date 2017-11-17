@@ -79,7 +79,7 @@ Livrables\Modules\M4_Lecture_Traitement_Donnees\bin\Debug)
 
 * [Code::Blocks 16.01](http://www.codeblocks.org/downloads) - IDE pour les programmes en C
 * [Arduino 1.8.5](https://www.arduino.cc/en/Main/Software) - IDE pour les programmes en C Arduino
-* [Processing 3.3.6](https://processing.org/download/) - Used to generate RSS Feeds
+* [Processing 3.3.6](https://processing.org/download/) - Acquisition des données et création du jeu de données CSV
 * [gcc version 6.3.0 (MinGW.org GCC-6.3.0-1)](https://gcc.gnu.org/) - Compilateur C
 
 ### Auteurs
