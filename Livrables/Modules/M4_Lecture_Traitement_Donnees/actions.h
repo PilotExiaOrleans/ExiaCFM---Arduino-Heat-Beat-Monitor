@@ -1,3 +1,13 @@
+/*
+==================================================================================================
+actions.h - Contient le prototype des fonctions de recherche / tris.
+==================================================================================================
+Last Verification : 17/11/2017
+Authors : Joel DIDIER, Louis MARJOLET, Vicente VAZ, Philippe BURLET
+Exia CESI A1 - Orleans
+==================================================================================================
+*/
+
 #ifndef ACTIONS_H_INCLUDED
 #define ACTIONS_H_INCLUDED
 #include "donnee.h"

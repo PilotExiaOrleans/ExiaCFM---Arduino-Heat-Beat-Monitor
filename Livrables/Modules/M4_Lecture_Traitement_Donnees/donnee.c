@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#define TAILLE_MAX 5000 //Taille du tableau � 5010
+#define TAILLE_MAX 5000 //Taille du tableau a 5010 (nb de lignes)
 #include "donnee.h"
 
 void RemplirTableau(structure tableau[], int nb)
@@ -33,7 +33,7 @@ void RemplirTableau(structure tableau[], int nb)
     }
     else
     {
-        // On affiche un message d'erreur en cas d'�chec
+        // On affiche un message d'erreur en cas d'echec
         printf("Impossible d'ouvrir le fichier jeu_de_donnees_test.csv");
     }
     fclose(fichier);

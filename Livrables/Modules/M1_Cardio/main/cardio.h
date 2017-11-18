@@ -1,3 +1,12 @@
+/*
+==================================================================================================
+cardio.h - Prototypes des fonctions
+==================================================================================================
+Last Verification : 17/11/2017
+Authors : Vicente VAZ
+Exia CESI A1 - Orleans
+==================================================================================================
+*/
 
 CalculPoul(long tempspoul, long tempsIntermediaire);
-GetPulseVal(long AnalogVar, int analogPin);
+

@@ -7,7 +7,7 @@
 int main()
 {
     int n = 5000;
-    structure tableau_donnees[n];       //Declaration d'un tableau de 10000 lignes de type structure défini dans donnee.h
+    structure tableau_donnees[n];       //Declaration d'un tableau de 10000 lignes de type structure defini dans donnee.h
     RemplirTableau(tableau_donnees,n);
     menu(tableau_donnees,n);            //Appel du menu
 }

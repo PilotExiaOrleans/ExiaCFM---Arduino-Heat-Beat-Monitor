@@ -3,7 +3,7 @@
 
 typedef struct Tableau
     {
-        float temps; //définition de nouveaux types de variables
+        float temps; //definition de nouveaux types de variables
         int pouls;
     }structure;
 

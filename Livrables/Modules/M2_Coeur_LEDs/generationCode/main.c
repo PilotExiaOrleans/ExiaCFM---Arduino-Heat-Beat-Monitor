@@ -23,5 +23,5 @@ int main()
     setParam(&choix); // Creation param.h avec la valeur de choix
     printf("Done !\n\n");
     system("PAUSE");
-
+    return 0;
 }

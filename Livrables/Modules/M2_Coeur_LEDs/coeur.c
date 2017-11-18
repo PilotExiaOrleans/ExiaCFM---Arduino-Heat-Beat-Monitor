@@ -1,6 +1,6 @@
 /*
 ==================================================================================================
-Coeur.c - Gere l'affichage des pulsations cardiaques sur l'afficheur.
+coeur.c - Gere l'affichage des pulsations cardiaques sur l'afficheur.
 Il recupere la valeur brute correspondant au pouls (etat haut) et declenche l'allumage des LEDs
 suivant le choix effectue par l'utilisateur via param.h
 ==================================================================================================
@@ -19,14 +19,14 @@ void AffichagePulsations ()
     switch(LEDPARAM) // On recupere la valeur de LEDPARAM correspondant au choix de l'utilisateur
 	// Rentre dans la fonction correspondante a LEDPARAM
     case 1:Toutes_les_LEDs_allumees(val_pouls);break;
-    case 2:Une_LED_sur_2_allumee((val_pouls);break;
-    case 3:Une_LED_sur_3_allumee((val_pouls);break;
+    case 2:Une_LED_sur_2_allumee(val_pouls);break;
+    case 3:Une_LED_sur_3_allumee(val_pouls);break;
     case 4:Une_LED_allumee_au_choix((val_pouls);break;
-    case 5:Chenille((val_pouls);break;
-    case 6:Chargement((val_pouls);break;
+    case 5:Chenille(val_pouls);break;
+    case 6:Chargement(val_pouls);break;
 }
 
-void Toutes_les_LEDs_allumees((val_pouls)
+void Toutes_les_LEDs_allumees(val_pouls)
 {
     int i;
     for(i = 2; i <= 11 ; i++)

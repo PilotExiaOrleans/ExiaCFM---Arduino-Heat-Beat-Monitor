@@ -21,4 +21,12 @@ void menu(unsigned int *choix)
 
     // Entree du choix par l'utilisateur
     scanf("%d", choix);
+
+    // Si choix inconnu
+    if (choix<0 || choix >5)
+    {
+        printf("Erreur - Choix inconnu. Le programme va se fermer.");
+        system("PAUSE");
+        exit(-1);
+    }
 }

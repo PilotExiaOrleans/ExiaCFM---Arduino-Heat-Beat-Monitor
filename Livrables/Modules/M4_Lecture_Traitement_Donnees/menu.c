@@ -14,7 +14,7 @@ void menu(structure tab[],int n)
         printf("4 - Affiche le nombre de lignes de donn%ces actuellement en m%cmoire\n5 - Affiche les maximum et minimums du pouls\n", 130, 130);
         printf("6 - Quitter l'application\n\n");
 
-        scanf("%d", &choix);    //Demande à l'utilisateur de choisir le mode d'affichage
+        scanf("%d", &choix);    //Demande a l'utilisateur de choisir le mode d'affichage
         system("cls");
         switch (choix)          //Appel de la fonction voulue
         {
