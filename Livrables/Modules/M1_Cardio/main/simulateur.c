@@ -22,4 +22,3 @@ int Simulation(int m,int repere,int repere_const)        //Dans cette fonction, 
   return m;
 } 
 
-/*
