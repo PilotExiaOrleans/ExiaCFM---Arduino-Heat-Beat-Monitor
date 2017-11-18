@@ -50,7 +50,8 @@ void loop() {
       temps_debut_poul = millis();
       if (temps_debut_poul > (temps_intermediaire + 200)){  
         long poul = CalculPoul(temps_debut_poul, temps_intermediaire);
-        Serial.println(temps_debut_poul);
+        Serial.print(temps_debut_poul);
+        Serial.print(";");
         Serial.println(poul);
         temps_intermediaire = temps_debut_poul;
       }
