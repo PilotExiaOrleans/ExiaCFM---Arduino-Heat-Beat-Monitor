@@ -78,11 +78,13 @@ void Une_LED_sur_3_allumee((val_pouls)
   }
 }
 
+/*
 // Generation param.h 1 LED Allumee Au Choix
 void Une_LED_allumee_au_choix((val_pouls)
 {
   
 }
+*/
 
 // Generation param.h Mode Chenille
 void Chenille((val_pouls)
