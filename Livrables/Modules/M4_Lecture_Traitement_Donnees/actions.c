@@ -30,8 +30,8 @@ void affichage_tableau(structure tableau[], int TAILLE) // Cette fonction sert a
 void tri_bulles_croissant_par_temps(structure tabl[], int Taille)
 {
     short tab_en_ordre = 0;
-    float temp;
-    int temp_2;
+    float temp; //variable permettant l'echange de 2 valeurs du temps qui se suivent
+    int temp_2; //variable permettant l'echange de 2 valeurs du pouls qui se suivent
     while(!tab_en_ordre)
     {
         tab_en_ordre = 1;
@@ -40,10 +40,10 @@ void tri_bulles_croissant_par_temps(structure tabl[], int Taille)
         {
             if(tabl[i].temps > tabl[i+1].temps) //Si la valeur de rang i est superieure a celle de rang i+1,
             {                                   //nous les interchangeons
-                temp = tabl[i].temps;
-                tabl[i].temps = tabl[i+1].temps;
+                temp = tabl[i].temps;             // la variable temp stock temporairement la valeur du temps en i pour...
+                tabl[i].temps = tabl[i+1].temps;  //...permettre l'echange des valeurs du temps et i+1 et celle ci
                 tabl[i+1].temps = temp;
-                temp_2 = tabl[i].pouls;
+                temp_2 = tabl[i].pouls; // la meme chose est faite avec le pouls pour que le pouls associé au temps reste la bonne valeur
                 tabl[i].pouls = tabl[i+1].pouls;
                 tabl[i+1].pouls = temp_2;
                 tab_en_ordre = 0;
@@ -212,7 +212,7 @@ void Ordre_croissant_ou_decroissant(structure tab[], int nb_lignes)
         }
         else
         {
-            printf("Le choix2 n'est pas correct");
+            printf("Le second choix n'est pas correct");
         }
     }
 
@@ -230,13 +230,13 @@ void Ordre_croissant_ou_decroissant(structure tab[], int nb_lignes)
         }
         else                                        //Envoie un message d'erreur si le choix2 rentre n'est pas valide
         {
-            printf("Le choix2 n'est pas correct");
+            printf("Le second choix n'est pas correct");
         }
     }
 
     else                                            //Envoie un message d'erreur si le choix2 rentre n'est pas valide
     {
-        printf("Le choix1 n'est pas correct");
+        printf("Le premier choix n'est pas correct");
     }
 
 
