@@ -68,7 +68,7 @@ void tri_bulles_croissant_par_pouls(structure tabl[], int Taille)
         int i;
         for(i=0 ; i < Taille ; i++)
         {
-            if(tabl[i].pouls < tabl[i+1].pouls) //Si la valeur de rang i est superieure a celle de rang i+1,
+            if(tabl[i].pouls > tabl[i+1].pouls) //Si la valeur de rang i est superieure a celle de rang i+1,
             {                                   //nous les interchangeons
                 temp = tabl[i].pouls;
                 tabl[i].pouls = tabl[i+1].pouls;

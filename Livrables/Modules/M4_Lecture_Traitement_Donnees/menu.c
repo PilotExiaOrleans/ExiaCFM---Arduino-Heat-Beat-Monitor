@@ -24,9 +24,10 @@ void menu(structure tab[],int n)
             case 3 : Moyenne_pouls(tab, n);break;
             case 4 : Afficher_nbr_lignes_de_donnees(tab, n);break;
             case 5 : Max_et_Min_pouls(tab, n);break;
-            case 6 : return 0;
+            case 6 : printf("Merci d'avoir utilis%c ce programme, bonne journ%ce/soir%ce %c vous!", 130, 130, 130, 133); return 0;
             default : printf("Le choix n'est pas valide\n");
         }
+        printf("\n\n");
         system("PAUSE");
         system("cls");
     }
