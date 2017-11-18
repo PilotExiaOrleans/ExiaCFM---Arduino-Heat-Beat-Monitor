@@ -195,52 +195,41 @@ void Ordre_croissant_ou_decroissant(structure tab[], int nb_lignes)
     int choix1, choix2, i;
     printf("Si ordre croissant, inserer 0 \n Si ordre decroissant, inserer 1\n");
     scanf("%d", &choix1);
-    printf("Si le temps doit etre trie, inserer 0 \n Si le pouls doit etre trie, inserer 1\n");
-    scanf("%d", &choix2);
-    if (choix1 == 0)
+    switch (choix1)
     {
-        if (choix2 == 0)
-        {
-            printf("Classement selon temps par ordre croissant");  //... 1 , selon le temps par ordre croissant
-            tri_bulles_croissant_par_temps(tab,nb_lignes);         //Appel de la fonction realisant la tache souhaitee
-        }
-        else if (choix2 == 1)
-        {
-            printf("Classement selon pouls par ordre croissant\n");   //... 2 , selon le pouls par ordre croissant
-            tri_bulles_croissant_par_pouls(tab,nb_lignes);          //Appel de la fonction realisant la tache souhaitee
-
-        }
-        else
-        {
-            printf("Le second choix n'est pas correct");
-        }
+        case 0: printf("Si le temps doit etre trie, inserer 0 \n Si le pouls doit etre trie, inserer 1\n");
+                scanf("%d", &choix2);
+                switch (choix2)
+                {
+                    case 0 : printf("Classement selon temps par ordre croissant\n");      //... 1 , selon le temps par ordre croissant
+                             tri_bulles_croissant_par_temps(tab,nb_lignes);               //Appel de la fonction realisant la tache souhaitee
+                             affichage_tableau(tab, nb_lignes);
+                             return -1;
+                    case 1 : printf("Classement selon pouls par ordre croissant\n");      //... 2 , selon le pouls par ordre croissant
+                             tri_bulles_croissant_par_pouls(tab,nb_lignes);               //Appel de la fonction realisant la tache souhaitee
+                             affichage_tableau(tab, nb_lignes);
+                             return -1;
+                    default :printf("Le second choix n'est pas correct\n");               //Envoie un message d'erreur si le choix2 rentre n'est pas valide
+                             return -1;
+                }
+        case 1 : printf("Si le temps doit etre trie, inserer 0 \n Si le pouls doit etre trie, inserer 1\n");
+                 scanf("%d", &choix2);
+                 switch (choix2)
+                 {
+                    case 0 : printf("Classement selon temps par ordre decroissant\n");     //... 1 , selon le temps par ordre decroissant
+                             tri_bulles_decroissant_par_temps(tab,nb_lignes);              //Appel de la fonction realisant la tache souhaitee
+                             affichage_tableau(tab, nb_lignes);
+                             return -1;
+                    case 1 : printf("Classement selon pouls par ordre decroissant\n");     //... 1 , selon le pouls par ordre decroissant
+                             tri_bulles_decroissant_par_pouls(tab,nb_lignes);              //Appel de la fonction realisant la tache souhaitee
+                             affichage_tableau(tab, nb_lignes);
+                             return -1;
+                    default :printf("Le second choix n'est pas correct\n");                //Envoie un message d'erreur si le choix2 rentre n'est pas valide
+                             return -1;
+                }
+        default : printf("Le premier choix n'est pas correct");                            //Envoie un message d'erreur si le choix1 rentre n'est pas valide
+                  return -1;
     }
-
-    else if (choix1 == 1)
-    {
-        if (choix2 == 0)
-        {
-            printf("Classement selon temps par ordre decroissant");     //... 1 , selon le temps par ordre decroissant
-            tri_bulles_decroissant_par_temps(tab,nb_lignes);            //Appel de la fonction realisant la tache souhaitee
-        }
-        else if (choix2 == 1)
-        {
-            printf("Classement selon pouls par ordre decroissant");     //... 1 , selon le pouls par ordre decroissant
-            tri_bulles_decroissant_par_pouls(tab,nb_lignes);            //Appel de la fonction realisant la tache souhaitee
-        }
-        else                                        //Envoie un message d'erreur si le choix2 rentre n'est pas valide
-        {
-            printf("Le second choix n'est pas correct");
-        }
-    }
-
-    else                                            //Envoie un message d'erreur si le choix2 rentre n'est pas valide
-    {
-        printf("Le premier choix n'est pas correct");
-    }
-
-
-    affichage_tableau(tab, nb_lignes);
 }
 
 //--------------------------------------------------------------------------------------
