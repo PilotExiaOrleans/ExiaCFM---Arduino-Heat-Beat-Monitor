@@ -8,5 +8,5 @@ Exia CESI A1 - Orleans
 ==================================================================================================
 */
 
-CalculPoul(long tempspoul, long tempsIntermediaire);
+long CalculPoul(long tempspoul, long tempsIntermediaire);
 
