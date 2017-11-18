@@ -9,8 +9,8 @@ void menu(structure tab[],int n)
     int choix;
     while (choix!=6)
     {
-        printf("Ouverture du menu\n\n0 - Affiche toutes les LEDs dans l'ordre du fichier\n1 - Affiche les donn%ces dans l'ordre croissant ou d%ccroissant\n", 130, 130);
-        printf("2 - Affiche les donn%ces en fonction du temps\n3 - Donne la moyenne du pouls\n", 130);
+        printf("Ouverture du menu\n\n0 - Affiche toutes les donn%ces dans l'ordre du fichier\n1 - Affiche les donn%ces dans l'ordre croissant ou d%ccroissant\n",130, 130, 130);
+        printf("2 - Affiche le pouls en fonction du temps recherch%c\n3 - Donne la moyenne du pouls\n", 130);
         printf("4 - Affiche le nombre de lignes de donn%ces actuellement en m%cmoire\n5 - Affiche les maximum et minimums du pouls\n", 130, 130);
         printf("6 - Quitter l'application\n\n");
 

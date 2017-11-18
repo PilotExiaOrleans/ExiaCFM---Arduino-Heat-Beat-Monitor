@@ -156,7 +156,7 @@ int Rechercher_et_afficher_donnees_en_fonction_du_temps(structure tab[], int nb_
     int position;
     int id, ifin, im; //indice de d�but, indice de fin et indice de milieu.
     id = 0;         // intervalle de recherche compris entre 0,
-    ifin = nb_lignes-1; // ,et le nombre de lignes.
+    ifin = nb_lignes; // ,et le nombre de lignes.
     position = -1;  //position initialisee a -1
     while ((id<=ifin) && (position==-1))    //tant que nous ne sommes pas arrives a la fin de l'intervalle et que position n'a pas chang�
         {
