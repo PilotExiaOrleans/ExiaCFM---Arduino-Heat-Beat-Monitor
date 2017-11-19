@@ -23,7 +23,7 @@ void setup()
   // INIT liaison serie, a 9600 bauds
   udSerial = new Serial(this, Serial.list()[0], 9600);
   // Creation fichier sortie Battements.csv
-  output = createWriter ("Battements.csv");
+  output = createWriter ("C:/Projets/Projet-Fondamentaux-Scientifiques/Livrables/Modules/M4_Lecture_Traitement_Donnees/Battements.csv");
 }
   // Ecriture donnees + Affichage
   void draw() 
