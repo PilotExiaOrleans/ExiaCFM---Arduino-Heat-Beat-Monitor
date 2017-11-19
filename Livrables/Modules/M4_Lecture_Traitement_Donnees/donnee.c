@@ -10,7 +10,7 @@ void RemplirTableau(structure tableau[], int nb)
     int i=0, pls; // i=compteur de boucle       pls= pouls
     float tps; //tps=temps
 
-    fichier = fopen("jeu_de_donnees_test.csv", "r"); // ouverture du fichier en lecture seule
+    fichier = fopen("Battements.csv", "r"); // ouverture du fichier en lecture seule
 
     if (fichier != NULL) // verification de l'ouverture du fichier
     {
@@ -34,7 +34,10 @@ void RemplirTableau(structure tableau[], int nb)
     else
     {
         // On affiche un message d'erreur en cas d'echec
-        printf("Impossible d'ouvrir le fichier jeu_de_donnees_test.csv");
+        printf("Impossible d'ouvrir le fichier Battements.csv\n");
+        printf("Fermeture du programme.\n");
+        system("PAUSE");
+        exit(-1);
     }
     fclose(fichier);
 }
