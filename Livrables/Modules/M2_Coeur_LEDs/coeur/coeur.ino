@@ -11,11 +11,11 @@ Exia CESI A1 - Orleans
 */
 
 #include <Arduino.h>
-#include "coeur.h"
-#include "param.h"
-#include "...\cardio.c"   //inclusion du programme cardio.c afin des récupérer les valeurs des pulsations
+#include "...\coeur.h"
+#include "...\param.h"
+#include "...\cardio.c"   //inclusion du programme cardio.c afin de rÃ©cupÃ©rer les valeurs des pulsations
 
-void AffichagePulsations ()
+void AffichagePulsations (LEDPARAM, val_pouls)
 {
     switch(LEDPARAM) // On recupere la valeur de LEDPARAM correspondant au choix de l'utilisateur
 	// Rentre dans la fonction correspondante a LEDPARAM
@@ -141,3 +141,21 @@ void Chargement((val_pouls)
 
     }
 }
+
+void setup            //Initialisation des tous les ports
+{
+  pinMode(2, OUTPUT);
+  pinMode(3, OUTPUT);
+  pinMode(4, OUTPUT);
+  pinMode(5, OUTPUT);
+  pinMode(6, OUTPUT);
+  pinMode(7, OUTPUT);
+  pinMode(8, OUTPUT);
+  pinMode(9, OUTPUT);
+  pinMode(10, OUTPUT);
+  pinMode(11, OUTPUT);
+void loop
+{
+  AffichagePulsations (LEDPARAM, val_pouls);       //Appel de la fonction AffichagePulsations
+}
+
