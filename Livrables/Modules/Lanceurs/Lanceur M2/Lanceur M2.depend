@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1511102211 source:c:\users\louis\documents\exia\projets\projet a1-fondamentaux scientifiques -2017-2018 - v2\projet-fondamentaux-scientifiques\recycle_bin\testing\lanceur m2\main.c
+	<stdio.h>
+	<stdlib.h>
+	<windows.h>
+	<conio.h>
+
