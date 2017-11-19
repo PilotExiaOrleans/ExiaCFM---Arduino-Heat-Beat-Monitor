@@ -11,15 +11,16 @@ Exia CESI A1 - Orleans
 #include "cardio.c"
 #include "simulateur.c"
 
-int valeur_intermediaire = 0;
-long temps_intermediaire = 0;
-int seuil = 0;
-int entree_analogique;
-int val_pouls;
-int v= 0;
-int valeur_repere = 500, repere_battement=10000;   
-long temps_debut_poul;
-int choix = 1;
+int valeur_intermediaire = 0;       //Cette variable servira à stocker la valeur analogique du pouls de la boucle précédente
+long temps_intermediaire = 0;       //Cette variable servira à stocker le temps du pouls de la boucle précédente
+int seuil = 0;                      //Cette variable sert à savoir si nous sommes dans un état ou le sang passe ou non
+int entree_analogique;              //Cette varaible sert à contenir les valeur lues par le capteur ou simulées
+int val_pouls;                      //Variable contenant l'etat du pouls (0 ou 1) pour le programme coeur.ino
+int v= 0;                           //Contient le résultat de la valeur simulée
+int valeur_repere = 500, repere_battement=10000;   //Ces variables sont respectivement un repere pour différencier un etat de pouls haut et bas
+                                                    //Et un repere pour le simulateur pour la quantité de meme valeur à générer
+long temps_debut_poul;              //Contient la valeur du temps du début de mesure du pouls
+int choix = 1;                      //Permet de choisir entre lire les valeurs sur le capteur ou simuler ces valeurs
 
 void setup() {
   pinMode(A0, INPUT);
