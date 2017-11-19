@@ -11,11 +11,11 @@ Exia CESI A1 - Orleans
 */
 
 #include <Arduino.h>
-#include "...\coeur.h"
-#include "...\param.h"
+#include "coeur.h"
+#include "param.h"
 #include "...\cardio.c"   //inclusion du programme cardio.c afin de récupérer les valeurs des pulsations
 
-void AffichagePulsations (LEDPARAM, val_pouls)
+void AffichagePulsations (int LEDPARAM, int val_pouls)
 {
     switch(LEDPARAM) // On recupere la valeur de LEDPARAM correspondant au choix de l'utilisateur
 	// Rentre dans la fonction correspondante a LEDPARAM
@@ -27,7 +27,7 @@ void AffichagePulsations (LEDPARAM, val_pouls)
     case 6:Chargement(val_pouls);break;
 }
 
-void Toutes_les_LEDs_allumees(val_pouls)
+void Toutes_les_LEDs_allumees(int val_pouls)
 {
     int i;
     for(i = 2; i <= 11 ; i++)
@@ -43,7 +43,7 @@ void Toutes_les_LEDs_allumees(val_pouls)
 }
 
 // Generation param.h 1 LED sur 2 Allumee
-void Une_LED_sur_2_allumee((val_pouls)
+void Une_LED_sur_2_allumee(int val_pouls)
 {
   int i;
   for (int i=2;i<12;i+=2)
@@ -58,7 +58,7 @@ void Une_LED_sur_2_allumee((val_pouls)
 }
 
 // Generation param.h 1 LED sur 3 Allumee
-void Une_LED_sur_3_allumee((val_pouls)
+void Une_LED_sur_3_allumee(int val_pouls)
 {
   int i;
   while( i<12)
@@ -88,7 +88,7 @@ void Une_LED_allumee_au_choix((val_pouls)
 */
 
 // Generation param.h Mode Chenille
-void Chenille((val_pouls)
+void Chenille(int val_pouls)
 {
   int i;
   for (int i=2;i<12;i+=1)
@@ -104,7 +104,7 @@ void Chenille((val_pouls)
 }
 
 // Generation param.h Mode Chargement
-void Chargement((val_pouls)
+void Chargement(int val_pouls)
 {
 
     for (int i=2 ; i<8 ; i++)
